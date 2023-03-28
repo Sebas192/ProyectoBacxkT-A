@@ -64,8 +64,10 @@ public class VentaController {
 		ventaExistente.setMonto(venta.getMonto());
 		ventaExistente.setEstado(venta.getEstado());
 		ventaExistente.setObservacion(venta.getObservacion());
-		ventaExistente.setUsuario(venta.getUsuario());
-		ventaExistente.setServicio(venta.getServicio());
+		ventaExistente.setCalificacion(venta.getCalificacion());
+		ventaExistente.setPqrs(venta.getPqrs());
+		ventaExistente.setCotizacion(venta.getCotizacion());
+
 		
 		servicio.actualizarVenta(ventaExistente);
 		return "redirect:/Venta";

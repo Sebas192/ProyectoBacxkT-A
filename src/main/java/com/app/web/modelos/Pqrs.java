@@ -15,20 +15,22 @@ public class Pqrs {
 	@Column(name = "Fecha", nullable = true)
 	private String Fecha;
 
-	@ManyToOne(cascade = { CascadeType.MERGE })
-	@JoinColumn(name = "Tipo")
+	@ManyToOne
+	@JoinColumn(name = "tipo_id", nullable = false)
 	private Tipo tipo;
 
-	@ManyToOne(cascade = { CascadeType.MERGE })
-	@JoinColumn(name = "Prioridad")
-	private Prioridad prioridad;
 
-	@ManyToOne(cascade = { CascadeType.MERGE })
-	@JoinColumn(name = "Estado", columnDefinition = "BIGINT(20) DEFAULT 1")
+	@ManyToOne
+	@JoinColumn(name = "prioridad_id", nullable = false)
+	private Prioridad prioridad;
+	@ManyToOne
+	@JoinColumn(name = "estado_id", nullable = false)
 	private Estado estado;
 
-	@ManyToOne(cascade = { CascadeType.MERGE })
-	@JoinColumn(name = "Venta")
+
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "venta_id")
 	private Venta venta;
 
 	@Column(name = "RespuestaPqrs", nullable = true)
@@ -38,8 +40,7 @@ public class Pqrs {
 		super();
 	}
 
-	public Pqrs(long idPqrs, String descripcion, String fecha, Tipo tipo, Prioridad prioridad, Estado estado,
-			Venta venta, String respuestaPqrs) {
+	public Pqrs(long idPqrs, String descripcion, String fecha, Tipo tipo, Prioridad prioridad, Estado estado, Venta venta, String respuestaPqrs) {
 		IdPqrs = idPqrs;
 		Descripcion = descripcion;
 		Fecha = fecha;
@@ -116,12 +117,15 @@ public class Pqrs {
 
 	@Override
 	public String toString() {
-		return "Pqrs [IdPqrs=" + IdPqrs + ", Descripcion=" + Descripcion + ", Fecha=" + Fecha + ", tipo=" + tipo
-				+ ", prioridad=" + prioridad + ", estado=" + estado + ", venta=" + venta + ", RespuestaPqrs="
-				+ RespuestaPqrs + "]";
+		return "Pqrs{" +
+				"IdPqrs=" + IdPqrs +
+				", Descripcion='" + Descripcion + '\'' +
+				", Fecha='" + Fecha + '\'' +
+				", tipo=" + tipo +
+				", prioridad=" + prioridad +
+				", estado=" + estado +
+				", venta=" + venta +
+				", RespuestaPqrs='" + RespuestaPqrs + '\'' +
+				'}';
 	}
-
-	
-	
-
 }

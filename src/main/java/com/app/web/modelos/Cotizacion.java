@@ -2,6 +2,7 @@ package com.app.web.modelos;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "Cotizacion")
@@ -9,9 +10,7 @@ public class Cotizacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long IdCotizacion;
-    @OneToOne
-    @JoinColumn(name = "Usuario")
-    private Usuario usuario;
+
     @Column(name = "Fecha", nullable = false, length = 20)
     private Date Fecha;
 
@@ -24,16 +23,24 @@ public class Cotizacion {
     @Column(name = "FechaRespuesta", nullable = true, length = 20)
     private Date FechaRespuesta;
 
+    @ManyToOne
+    @JoinColumn(name = "Usuario")
+    private Usuario Usuario;
+
+    @OneToMany(mappedBy = "Cotizacion")
+    private List<Venta> venta;
+
     public Cotizacion() {
     }
 
-    public Cotizacion(Long idCotizacion, Usuario usuario, Date fecha, String descriocion, String respuesta, Date fechaRespuesta) {
+    public Cotizacion(Long idCotizacion, Date fecha, String descriocion, String respuesta, Date fechaRespuesta, com.app.web.modelos.Usuario usuario, List<Venta> venta) {
         IdCotizacion = idCotizacion;
-        this.usuario = usuario;
         Fecha = fecha;
         Descriocion = descriocion;
         Respuesta = respuesta;
         FechaRespuesta = fechaRespuesta;
+        Usuario = usuario;
+        this.venta = venta;
     }
 
     public Long getIdCotizacion() {
@@ -42,14 +49,6 @@ public class Cotizacion {
 
     public void setIdCotizacion(Long idCotizacion) {
         IdCotizacion = idCotizacion;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
     }
 
     public Date getFecha() {
@@ -84,15 +83,32 @@ public class Cotizacion {
         FechaRespuesta = fechaRespuesta;
     }
 
+    public com.app.web.modelos.Usuario getUsuario() {
+        return Usuario;
+    }
+
+    public void setUsuario(com.app.web.modelos.Usuario usuario) {
+        Usuario = usuario;
+    }
+
+    public List<Venta> getVenta() {
+        return venta;
+    }
+
+    public void setVenta(List<Venta> venta) {
+        this.venta = venta;
+    }
+
     @Override
     public String toString() {
         return "Cotizacion{" +
                 "IdCotizacion=" + IdCotizacion +
-                ", usuario=" + usuario +
                 ", Fecha=" + Fecha +
                 ", Descriocion='" + Descriocion + '\'' +
                 ", Respuesta='" + Respuesta + '\'' +
                 ", FechaRespuesta=" + FechaRespuesta +
+                ", Usuario=" + Usuario +
+                ", venta=" + venta +
                 '}';
     }
 }
