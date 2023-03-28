@@ -1,82 +1,237 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>INICIO</title>
+    <title>Conocenos</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/acerca_de_nosotrosstyle.css">
     <link rel="icon" href="img/logov_beta_png.png">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/logosolo.png">
-    <script src="/js/scrollreveal.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/main/resources/static/js/scrollreveal.js"> </script>
     <script src="https://kit.fontawesome.com/04773321cf.js" crossorigin="anonymous"></script>
 </head>
-<body>
-
+<body> 
     <!----------------ENCABEZADO-------------------------->
-    <div class="logocontenido2 tarjeta">
-        <img id="logoini" src="img/logo.png" alt="">
-    </div>
-    <div class="container-fluid encabezado">
-        <nav class="row flex-direction">
-            <div class="col-2 laterales"></div>
-            <div class="col-8 nav">
-                <a th:href="@{/}" class="col-2 menu-home">INICIO</a>
-                <a th:href="@{/conocenos}" class="col-2">ACERCA DE NOSOTROS</a>
-                <a th:href="@{/TrabajaConNosotros}" class="col-2">TRABAJA CON NOSOTROS</a>
-                <a th:href="@{/NuestroTrabajo}" class="col-2">NUESTROS TRABAJOS</a>
-                <a th:href="@{/login}" class="col-2">INGRESO</a>
+    <header >
+        <nav class="encabezado" id="iraencabezado">
+            <div>
+                <img  src="img/logo.png" alt="arte diseño" class="logo8">
             </div>
-            <div class="col-2 laterales"></div>
+            <input type="checkbox" id="check1">
+            <label for="check1" class="bar-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a class="active" th:href="@{/}" style="text-shadow:1px 1px 5px #000000;">Inicio</a></li>
+                <li><a href="#descubre" style="text-shadow:1px 1px 5px #000000;">Descubre</a></li>
+                <li><a href="#Misionyvision" style="text-shadow:1px 1px 5px #000000;">Misión y Visión</a></li>
+                <li><a href="#Valores" style="text-shadow:1px 1px 5px #000000;">Valores y habilidades</a></li>
+                <li><a href="#manual" style="text-shadow:1px 1px 5px #000000;">Manual corporativo</a></li>
+            </ul>
         </nav>
-    </div>
+        <div class="banner-text">
+            <h2>TECNO&ART</h2>
+            <h1>Conoce <b>mas </b>sobre <b>nuestra </b>empresa de <span>publicidad</span></h1>
+            <div>
+                <a th:href="@{/login}" class="button1">Iniciar</a>
+                <a th:href="@{/Usuario/Registrarse}" class="button2">Registrar</a>
+            </div>
+        </div>
+    </header>
+    <br>
+    <br>
     <!----------------FIN ENCABEZADO-------------------------->
+    <section class="hero cambiosPA" id="hero">
 
-    <!----------------CONTENIDO-------------------------->
-    <div class="container-fluid contenido">
-        <div class="contenido1">
-            <h1 id="texto">Tecno&Art</h1>
-            <img id="imginicio" src="img/tienda.png" alt="#">
-            <h1 id="texto">Somos una empresa de publicidad que tiene más de 20 años de experiencia manejando productos como banner,
-				lona, adhesivos, impresión digital, corte láser para madera, acrílico y demás, tenemos servicio de
-				impresión litográfica y elaboración de sellos.</h1>
-        </div>
-        <div class="contenido2 tarjeta2 container-fluid row"> 
-            <h1 id="textoinfo">La calidad de nuestro servicio</h1>
-            <div id="imagenesini"  class="col-6"><img src="img/calidad.png" alt=""></div>
-            <div id="textoinfo" class="col-6"><h1>Nos dedicamos a darle una calidad máxima a cada proyecto que creamos con nuestras propias manos, logrando
-				transmitir todo el esmero, creatividad y empeño que ponemos a cada diseño.
-            </h1></div>
-        </div>
-        <div class="contenido1">
-            <h1 id="texto1">Nuestra misión</h1>
-            <img id="imginicio2" src="img/mision.png" alt="">
-            <h1 id="texto"> Maximizar la calidad en los diseños entregados a la sociedad y a nuestros clientes, 
-                aplicando los conocimientos que hemos adquirido en estos 20 años de arduo trabajo y esfuerzo. </h1>
-        </div>
-        <div class="contenido2 tarjeta3 container-fluid row"> 
-            <h1 id="textoinfo">Nuestra visión</h1>
-            <div id="textoinfo" class="col-4"><h1>Ser una de las mejores empresas de desarrollo web, reconocida por la innovación, 
-                simpleza y generación de valor de sus soluciones, con una alta productividad y calidad humana de su equipo.</h1></div>
-            <div id="imagenesini"  class="col-8"><img src="img/vision.png" alt=""></div>
-        </div>
-        <div class="contenido1  container-fluid row"> 
-            <h1 id="texto">Nuestros valores y habilidades como empresa e individuos</h1>
-            <div id="imagenesini2"  class="col-6"><img src="img/empresa.png" alt=""></div>
-            <div id="imagenesini2" class="col-6"><img src="img/valores.png" alt=""></div>
-            <h1 id="texto">Honestidad, Lealtad, Respeto, Pasión por los desafíos, Superación Constante, Creatividad y Amabilidadas siempre con nuestros 
-                clientes para brindar el mejor servicio.</h1>
-        </div>
-        <div class="contenido2 tarjeta container-fluid "> 
-            <h1 id="textoinfo">Nuestros Manual Coorporativo</h1>
-            <a href="#"><img id="imginicio3" src="img/manual.png" alt="#"></a>
-        </div>
-    </div>
+    </section>
 
-<!----------------FIN CONTENIDO-------------------------->
+    <section class="dis-sto cambiosPA">
+        <div class="container" id="descubre">
+            <div class="res-info">
+                <div>
+                    <img class="container animation" src="/img/TabajoConferece.jpg" alt="">
+                </div>
+
+                <div class="res-des pad-rig">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">D</span>escubre
+                        </h2>
+                        <h1 class="head hea-dark">Mas de Arte&Diseño</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Somos una empresa de publicidad que tiene más de 20 años de experiencia manejando productos como banner,
+                        lona, adhesivos, impresión digital, corte láser para madera, acrílico y demás, tenemos servicio de
+                        impresión litográfica y elaboración de sellos.
+                    </p>
+                    <a  href="#iraencabezado" class="btn cta-btn">Inicio pagina</a>
+                </div>
+                    
+            </div>
+        </div>
+    </section>
+
+
+    <section class="taste bt cambiosPA">
+        <div class="container">
+            <div class="global">
+                <h2 class="h2-sub">
+                    <span class="fil">P</span>ublicidad
+                </h2>
+                <h1 class="head">De la mejor calidad</h1>
+            </div>
+        </div>
+    </section>
+
+
+    <section  id="pasar4" class="disco cambiosPA">
+        <div class="container">
+            <div class="res-info">
+                <div class="res-des">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">L</span>a calidad de nuestro
+                        </h2>
+                        <h1 class="head hea-dark">servicio</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Nos dedicamos a darle una calidad máxima a cada proyecto que creamos con nuestras propias manos, logrando
+				        transmitir todo el esmero, creatividad y empeño que ponemos a cada diseño.
+                    </p>
+                    <a  href="#iraencabezado" class="btn cta-btn">Inicio pagina</a>
+                </div>
+                <div class="image-group pad-rig">
+                    <img src="/img/SpriteMar.png" alt="">
+                    <img src="/img/LogoCol.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pb bt cambiosPA">
+        <div class="container">
+            <div class="global">
+                <h2 class="h2-sub">
+                    <span class="fil">E</span>l
+                </h2>
+                <h1 class="head">Arte es pasión</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="pasar3">
+        <div class="container cambiosPA" id="Misionyvision">
+            <div class="res-info">
+                    <div>
+                        <img class="container animation" src="/img/MisionL.png" alt="">
+                    </div>
+                
+                <div class="res-des pad-rig">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">N</span>uestra
+                        </h2>
+                        <h1 class="head hea-dark">Misión</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Maximizar la calidad en los diseños entregados a la sociedad y a nuestros clientes, 
+                        aplicando los conocimientos que hemos adquirido en estos 20 años de arduo trabajo y esfuerzo. 
+                    </p>
+                    <a  href="#iraencabezado" class="btn cta-btn">Inicio pagina</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section  id="pasar4" class="disco cambiosPA">
+        <div class="container">
+            <div class="res-info">
+                <div class="res-des">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">N</span>uestra
+                        </h2>
+                        <h1 class="head hea-dark">visión</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Ser una de las mejores empresas de desarrollo web, reconocida por la innovación, 
+                        simpleza y generación de valor de sus soluciones, con una alta productividad y calidad humana de su equipo.
+                    </p>
+                    <a  href="#iraencabezado" class="btn cta-btn">Inicio pagina</a>
+                </div>
+                <div>
+                    <img class="container animation" src="/img/ojoVision.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="taste bt cambiosPA">
+        <div class="container">
+            <div class="global">
+                <h2 class="h2-sub">
+                    <span class="fil">P</span>ublicidad
+                </h2>
+                <h1 class="head">De la mejor calidad</h1>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container cambiosPA" id="Valores">
+            <div class="res-info">
+                <div>
+                    <img class="container animation" src="/img/Valoresimg.png" alt="">
+                </div>
+                <div class="res-des pad-rig">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">N</span>uestros 
+                        </h2>
+                        <h1 class="head hea-dark">valores y habilidades</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Honestidad, Lealtad, Respeto, Pasión por los desafíos, Superación Constante, Creatividad y Amabilidadas siempre con nuestros 
+                        clientes para brindar el mejor servicio.
+                    </p>
+                    <a  href="#iraencabezado" class="btn cta-btn">Inicio pagina</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pb bt cambiosPA" id="manual">
+        <div class="container">
+            <div class="global">
+                <h2 class="h2-sub">
+                    <span class="fil">N</span>uestra empresa
+                </h2>
+                <h1 class="head">Arte&Diseño</h1>
+                <a href="#" class="btn cta-btn">Manual Corporativo</a>
+            </div>
+        </div>
+    </section>
+    <!----------------FIN CONTENIDO-------------------------->
 
 <!-------PIE DE PAGINA---->
 <footer class="piepagina">
@@ -84,7 +239,6 @@
         <div class="box__footer">
             <div class="logo">
                 <iframe  class="w3-round-large" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.154079670225!2d-74.11302318523752!3d4.743269996555049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8488b8c01c3f%3A0xfb245984007b5257!2sArte%20%26%20Dise%C3%B1o%20Publicidad!5e0!3m2!1ses!2sco!4v1649227214068!5m2!1ses!2sco" width="300" height="300" style="border:0; margin-left: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
             </div>
             <div class="terms text-center">
                 <p>Bienvenidos a Arte&Diseño una empresa con mas de 20 años de experiencia y manejando producto de publicidad ubicados es Suba gaintana</p>
@@ -92,14 +246,14 @@
         </div>
         <div class="box__footer">
             <h2>Compañia</h2>
-            <a href="conoce mas.html">Quienes somos</a>
-            <a href="https://goo.gl/maps/BpLzbr5ME97XEUrLA">Como llegar</a>
+            <a th:href="@{/conocenos}">Quienes somos</a>
+            <a href="https://goo.gl/maps/j7KgCdxmhWCguuxa8">Como llegar</a>
             <a href="">Contactanos</a>
             <a href=""></a>
         </div>
         <div class="box__footer">
             <h2>Contratación</h2>
-            <a href="registro_HDV.html">Trabaja con nosotros</a>
+            <a th:href="@{/TrabajaConNosotros}">Trabaja con nosotros</a>
             <a href=""></a>
             <a href=""></a>
             <a href=""></a>
@@ -117,10 +271,21 @@
         <p>Todos los derechos reservados © 2021</p>
         <b>Tecno&Art</b>
     </div>
-    <div class="final"></div> 
 </footer>
 <!-------FIN PIE DE PAGINA---->
 
-<script src="js/index.js"></script>
+<script src="/js/index.js"></script>
+
+<script>
+   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
 </body>
 </html>

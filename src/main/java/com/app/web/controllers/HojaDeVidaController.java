@@ -1,6 +1,5 @@
 package com.app.web.controllers;
 
-import com.app.web.modelos.Usuario;
 import com.app.web.servicios.UsuarioServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +14,6 @@ import com.app.web.modelos.HojaDeVida;
 
 import com.app.web.servicios.HojaDeVidaServicio;
 
-import java.util.List;
 
 @Controller
 public class HojaDeVidaController {

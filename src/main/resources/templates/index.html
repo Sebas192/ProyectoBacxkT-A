@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>INICIO</title>
+    <title>Inicio</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/indexstyle.css">
     <link rel="icon" type="image/png" href="img/logosolo.png">
-    <script src="js/scrollreveal.js"> </script>
+    <script src="/src/main/resources/static/js/scrollreveal.js"> </script>
     <script src="https://kit.fontawesome.com/04773321cf.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,7 +16,7 @@
     <header>
         <nav class="encabezado">
             <div>
-                <img src="img/logo.png" alt="arte diseño" class="logo8">
+                <img  src="img/logo.png" alt="arte diseño" class="logo8">
             </div>
             <input type="checkbox" id="check1">
             <label for="check1" class="bar-btn">
@@ -24,9 +24,10 @@
             </label>
             <ul class="nav-menu">
                 <li><a class="active" th:href="@{/}" style="text-shadow:1px 1px 5px #000000;">Inicio</a></li>
-                <li><a th:href="@{/conocenos}" style="text-shadow:1px 1px 5px #000000;">Conocenos</a></li>
-                <li><a th:href="@{/TrabajaConNosotros}" style="text-shadow:1px 1px 5px #000000;">Trabaja Con nosotros</a></li>
-                <li><a th:href="@{/NuestroTrabajo}" style="text-shadow:1px 1px 5px #000000;">Nuestro trabajo</a></li>
+                <li><a href="#pasar2" style="text-shadow:1px 1px 5px #000000;">Conocenos</a></li>
+                <li><a href="#pasar3" style="text-shadow:1px 1px 5px #000000;">Trabaja Con nosotros</a></li>
+                <li><a href="#pasar4" style="text-shadow:1px 1px 5px #000000;">Nuestro trabajo</a></li>
+                <li><a href="https://goo.gl/maps/hMuVX8ayt5VAKLkA8" style="text-shadow:1px 1px 5px #000000;">Ubicación</a></li>
             </ul>
         </nav>
         <div class="banner-text">
@@ -47,11 +48,11 @@
 
     </section>
 
-    <section class="dis-sto cambiosPA">
+    <section id="pasar2" class="dis-sto cambiosPA">
         <div class="container">
             <div class="res-info">
                 <div>
-                    <img src="img/arte3.jpg" alt="">
+                    <img class="container animation" src="img/arte3.jpg" alt="">
                 </div>
 
                 <div class="res-des pad-rig">
@@ -59,7 +60,7 @@
                         <h2 class="h2-sub">
                             <span class="fil">D</span>escubre
                         </h2>
-                        <h1 class="head hea-dark">La Historia</h1>
+                        <h1 class="head hea-dark">Historia de Arte&diseño</h1>
                         <div class="circle">
                             <i class="fas fa-circle"></i>
                         </div>
@@ -67,7 +68,7 @@
                     <p>
                         Somos Arte&Diseño, una empresa líder en publicidad con más de 20 años de experiencia. Nos destacamos por nuestros diseños innovadores que cumplen las expectativas de nuestros clientes. Trabajamos de manera cercana y personalizada para garantizar su satisfacción y fidelidad. Contáctenos y llevemos su negocio al siguiente nivel.
                     </p>
-                    <a th:href="@{/TrabajaConNosotros}" class="btn cta-btn">Nosotros</a>
+                    <a th:href="@{/conocenos}"  class="btn cta-btn">Conocenos</a>
                 </div>
 
             </div>
@@ -87,7 +88,7 @@
     </section>
 
 
-    <section class="disco cambiosPA">
+    <section  id="pasar4" class="disco cambiosPA">
         <div class="container">
             <div class="res-info">
                 <div class="res-des">
@@ -103,7 +104,7 @@
                     <p>
                         El objetivo de una empresa de publicidad es ayudar a sus clientes a mejorar su visibilidad y posicionamiento en el mercado, aumentar sus ventas y mejorar su relación con sus clientes potenciales. Para ello, utilizan técnicas y herramientas de marketing y publicidad que se ajusten a las necesidades específicas de cada cliente.
                     </p>
-                    <a href="#" class="btn cta-btn">Nuestro trabajo</a>
+                    <a  th:href="@{/NuestroTrabajo}" class="btn cta-btn">Nuestro trabajo</a>
                 </div>
                 <div class="image-group pad-rig">
                     <img src="/img/sellos-oficina.png" alt="">
@@ -127,31 +128,28 @@
         </div>
     </section>
 
-    <section>
+    <section id="pasar3">
         <div class="container cambiosPA">
             <div class="res-info">
 
                 <div class="image-group">
-                    <img src="images/deli-1.jpg" alt="">
-                    <img src="images/deli-2.jpg" alt="">
+                    <img src="/img/videojuegos.png" alt="">
+                    <img src="/img/pngegg.png" alt="">
                 </div>
                 <div class="res-des pad-rig">
                     <div class="global">
                         <h2 class="h2-sub">
-                            <span class="fil">D</span>egusta
+                            <span class="fil">S</span>omos
                         </h2>
-                        <h1 class="head hea-dark">Delisioso menu</h1>
+                        <h1 class="head hea-dark">De confianza</h1>
                         <div class="circle">
                             <i class="fas fa-circle"></i>
                         </div>
                     </div>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Doloremque veniam autem qui magnam ex tempora atque, voluptas
-                        voluptatem, recusandae porro corporis assumenda.
-                        Aliquam accusamus blanditiis illo, vero quia tempora praesentium.
+                        Trabajar con Arte&Diseño es fácil y sencillo. Contáctanos y cuéntanos sobre tus objetivos de marketing y publicidad. Nuestro equipo de diseño creará una propuesta personalizada que incluirá detalles sobre el diseño, los costos y los plazos. Una vez aprobada, comenzamos a trabajar para asegurarnos de que la campaña sea un éxito. ¡Contáctanos hoy para llevar tu negocio al siguiente nivel! 
                     </p>
-                    <a href="#" class="btn cta-btn">Has una reservacion</a>
+                    <a th:href="@{/TrabajaConNosotros}" class="btn cta-btn">Trabaja con nosotros</a>
                 </div>
 
             </div>
@@ -173,14 +171,14 @@
         </div>
         <div class="box__footer">
             <h2>Compañia</h2>
-            <a href="conoce mas.html">Quienes somos</a>
-            <a href="https://goo.gl/maps/BpLzbr5ME97XEUrLA">Como llegar</a>
+            <a th:href="@{/conocenos}">Quienes somos</a>
+            <a href="https://goo.gl/maps/j7KgCdxmhWCguuxa8">Como llegar</a>
             <a href="">Contactanos</a>
             <a href=""></a>
         </div>
         <div class="box__footer">
             <h2>Contratación</h2>
-            <a href="registro_HDV.html">Trabaja con nosotros</a>
+            <a th:href="@{/TrabajaConNosotros}">Trabaja con nosotros</a>
             <a href=""></a>
             <a href=""></a>
             <a href=""></a>
@@ -204,5 +202,6 @@
 <!-------FIN PIE DE PAGINA---->
 
 <script src="js/index.js"></script>
+<script src="/js/indexAnimation.js"></script>
 </body>
 </html>
