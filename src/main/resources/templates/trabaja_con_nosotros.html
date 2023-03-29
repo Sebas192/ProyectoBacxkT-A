@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>Trabaja con nosotros</title>
     <meta charset="UTF-8">
@@ -10,36 +11,38 @@
     <script src="/js/scrollreveal.js"> </script>
     <script src="https://kit.fontawesome.com/04773321cf.js" crossorigin="anonymous"></script>
 </head>
-<body> 
-<!----------------ENCABEZADO-------------------------->
-<header>
-    <nav class="encabezado animation2">
-        <div>
-            <img src="img/logo.png" alt="arte diseño" class="logo8">
+
+<body>
+    <!----------------ENCABEZADO-------------------------->
+    <header>
+        <nav class="encabezado animation2">
+            <div>
+                <img src="img/logo.png" alt="arte diseño" class="logo8">
+            </div>
+            <input type="checkbox" id="check1">
+            <label for="check1" class="bar-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a class="active" th:href="@{/}" style="text-shadow:1px 1px 5px #000000;">Inicio</a></li>
+                <li><a th:href="@{/conocenos}" style="text-shadow:1px 1px 5px #000000;">Conocenos</a></li>
+                <li><a th:href="@{/NuestroTrabajo}" style="text-shadow:1px 1px 5px #000000;">Nuestro trabajo</a></li>
+                <li><a href="https://goo.gl/maps/hMuVX8ayt5VAKLkA8"
+                        style="text-shadow:1px 1px 5px #000000;">Ubicación</a></li>
+            </ul>
+        </nav>
+        <div class="banner-text">
+            <h2>TECNO&ART</h2>
+            <h1>Pudes <b>ser </b>parte <b>de </b>nuestra <span>empresa </span></h1>
+            <div>
+                <a th:href="@{/login}" class="button1">Iniciar</a>
+                <a th:href="@{/Usuario/Registrarse}" class="button2">Registrar</a>
+            </div>
         </div>
-        <input type="checkbox" id="check1">
-        <label for="check1" class="bar-btn">
-            <i class="fa fa-bars"></i>
-        </label>
-        <ul class="nav-menu">
-            <li><a class="active" th:href="@{/}" style="text-shadow:1px 1px 5px #000000;">Inicio</a></li>
-            <li><a th:href="@{/conocenos}" style="text-shadow:1px 1px 5px #000000;">Conocenos</a></li>
-            <li><a th:href="@{/NuestroTrabajo}" style="text-shadow:1px 1px 5px #000000;">Nuestro trabajo</a></li>
-            <li><a href="https://goo.gl/maps/hMuVX8ayt5VAKLkA8" style="text-shadow:1px 1px 5px #000000;">Ubicación</a></li>
-        </ul>
-    </nav>
-    <div class="banner-text">
-        <h2>TECNO&ART</h2>
-        <h1>Pudes <b>ser </b>parte <b>de </b>nuestra <span>empresa </span></h1>
-        <div>
-            <a th:href="@{/login}" class="button1">Iniciar</a>
-            <a th:href="@{/Usuario/Registrarse}" class="button2">Registrar</a>
-        </div>
-    </div>
-</header>
-<br>
-<br>
-<!----------------FIN ENCABEZADO-------------------------->
+    </header>
+    <br>
+    <br>
+    <!----------------FIN ENCABEZADO-------------------------->
 
     <!----------------CONTENIDO-------------------------->
     <section class="hero cambiosPA" id="hero">
@@ -64,9 +67,12 @@
                         </div>
                     </div>
                     <p>
-                        Siempre trabajamos para brindar el mejor servicio posible a nuestros
-                        clientes, a continuacion te mostramos algunos de nuestros trabajos y algunos de
-                        nuestros clientes satisfechos
+                        En Arte&Diseño valoramos la creatividad y la innovación en nuestros diseños. Buscamos personas
+                        que disfruten pensando fuera de la caja y creando soluciones únicas e impactantes. Nuestro
+                        ambiente de trabajo es amigable y colaborativo, lo que permite trabajar en equipo y aprender de
+                        los compañeros. Como empresa con más de 20 años de experiencia en el mercado, ofrecemos la
+                        oportunidad de crecer profesionalmente y formar parte de un equipo apasionado por la publicidad
+                        y el diseño. ¡Únete a nuestro equipo en Arte&Diseño!
                     </p>
                 </div>
 
@@ -78,7 +84,7 @@
         <div class="container">
             <div class="global">
                 <h2 class="h2-sub">
-                    <span class="fil">T</span>u 
+                    <span class="fil">T</span>u
                 </h2>
                 <h1 class="head">Gran oportunidad</h1>
                 <a th:href="@{/login}" class="btn cta-btn">Trabaja con nosotros</a>
@@ -87,49 +93,54 @@
     </section>
     <!----------------FIN CONTENIDO-------------------------->
 
-<!-------PIE DE PAGINA---->
-<footer class="piepagina">
-    <div class="container__footer">
-        <div class="box__footer">
-            <div class="logo">
-                <iframe  class="w3-round-large" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.154079670225!2d-74.11302318523752!3d4.743269996555049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8488b8c01c3f%3A0xfb245984007b5257!2sArte%20%26%20Dise%C3%B1o%20Publicidad!5e0!3m2!1ses!2sco!4v1649227214068!5m2!1ses!2sco" width="300" height="300" style="border:0; margin-left: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-------PIE DE PAGINA---->
+    <footer class="piepagina">
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <iframe class="w3-round-large"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.154079670225!2d-74.11302318523752!3d4.743269996555049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8488b8c01c3f%3A0xfb245984007b5257!2sArte%20%26%20Dise%C3%B1o%20Publicidad!5e0!3m2!1ses!2sco!4v1649227214068!5m2!1ses!2sco"
+                        width="300" height="300" style="border:0; margin-left: 20px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+                </div>
+                <div class="terms text-center">
+                    <p>Bienvenidos a Arte&Diseño una empresa con mas de 20 años de experiencia y manejando producto de
+                        publicidad ubicados es Suba gaintana</p>
+                </div>
             </div>
-            <div class="terms text-center">
-                <p>Bienvenidos a Arte&Diseño una empresa con mas de 20 años de experiencia y manejando producto de publicidad ubicados es Suba gaintana</p>
+            <div class="box__footer">
+                <h2>Compañia</h2>
+                <a href="conoce mas.html">Quienes somos</a>
+                <a href="https://goo.gl/maps/BpLzbr5ME97XEUrLA">Como llegar</a>
+                <a href="">Contactanos</a>
+                <a href=""></a>
+            </div>
+            <div class="box__footer">
+                <h2>Contratación</h2>
+                <a href="registro_HDV.html">Trabaja con nosotros</a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+            <div class="box__footer">
+                <h2>Redes sociales</h2>
+                <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href=""><i class="fa-brands fa-twitter"></i> Twtter</a>
+                <a href=""><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+                <a href=""><i class="fa-brands fa-instagram"></i> instagram</a>
             </div>
         </div>
-        <div class="box__footer">
-            <h2>Compañia</h2>
-            <a href="conoce mas.html">Quienes somos</a>
-            <a href="https://goo.gl/maps/BpLzbr5ME97XEUrLA">Como llegar</a>
-            <a href="">Contactanos</a>
-            <a href=""></a>
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2021</p>
+            <b>Tecno&Art</b>
         </div>
-        <div class="box__footer">
-            <h2>Contratación</h2>
-            <a href="registro_HDV.html">Trabaja con nosotros</a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-        </div>
-        <div class="box__footer">
-            <h2>Redes sociales</h2>
-            <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
-            <a href=""><i class="fa-brands fa-twitter"></i> Twtter</a>
-            <a href=""><i class="fa-brands fa-linkedin"></i> Linkedin</a>
-            <a href=""><i class="fa-brands fa-instagram"></i> instagram</a>
-        </div>
-    </div>
-    <div class="box__copyright">
-        <hr>
-        <p>Todos los derechos reservados © 2021</p>
-        <b>Tecno&Art</b>
-    </div>
-    <div class="final"></div> 
-</footer>
-<!-------FIN PIE DE PAGINA---->
+        <div class="final"></div>
+    </footer>
+    <!-------FIN PIE DE PAGINA---->
 
-<script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
