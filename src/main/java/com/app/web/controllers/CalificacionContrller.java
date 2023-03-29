@@ -61,7 +61,7 @@ public class CalificacionContrller {
 	public String EditarCalificacionFomulario(@PathVariable long IdCalificacion, Model modelo) {
 		List<Venta> listaVenta = ServicioVenta.listarVentas();
 		modelo.addAttribute("Calificacion", servicio.obtenerCalificacionPorId(IdCalificacion));
-		modelo.addAttribute("ventas", listaVenta);
+		modelo.addAttribute("Venta", listaVenta);
 		return "/Editar_Calificacion";
 	}
 
