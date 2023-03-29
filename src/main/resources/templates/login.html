@@ -12,19 +12,34 @@
                 
         <!-- Boxicons CSS -->
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="icon" type="image/png" href="img/logosolo.png">            
+        <link rel="icon" type="image/png" href="img/logosolo.png">
+        <script src="/js/scrollreveal.js"></script>            
     </head>
     <body>
+        <header id="loco">
+            <nav class="encabezado animation2">
+                <div>
+                    <img src="img/logo.png" alt="arte diseño" class="logo8">
+                </div>
+                <input type="checkbox" id="check1">
+                <label for="check1" class="bar-btn">
+                    <i class="fa fa-bars"></i>
+                </label>
+                <ul class="nav-menu">
+                    <li><a class="active" th:href="@{/}" style="text-shadow:1px 1px 5px #000000;">Inicio</a></li>
+                </ul>
+            </nav>
+        </header>
         <section class="container forms">
             <div class="form login">
                 <div class="form-content">
-                    <header>Inicio de sesion</header>
+                    <header id="title90">Inicio de sesion</header>
                     <form  th:action="@{/login}" method="post" class="formulario_validar" id="formulario">
                         <!----Campo de correo----->
-                        <div class="formulario__grupo " id="grupo__correo">
+                        <div class="formulario__grupo " id="grupo__email">
                             <label class="formulario__label">Correo Electrónico</label>
                             <div class="formulario__grupo-input field input-field">
-                                <input type="email" class="formulario__input input" name="username" id="correo" placeholder="correo@correo.com">
+                                <input type="email" class="formulario__input input" name="email" id="email" placeholder="correo@correo.com">
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
                             <p class="formulario__input-error">El correo no es correcto.</p>
@@ -63,10 +78,56 @@
 
             
         </section>
+        
+    <!-------PIE DE PAGINA---->
+    <footer class="piepagina">
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <iframe class="w3-round-large"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.154079670225!2d-74.11302318523752!3d4.743269996555049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8488b8c01c3f%3A0xfb245984007b5257!2sArte%20%26%20Dise%C3%B1o%20Publicidad!5e0!3m2!1ses!2sco!4v1649227214068!5m2!1ses!2sco"
+                        width="300" height="300" style="border:0; margin-left: 20px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+                <div class="terms text-center">
+                    <p>Bienvenidos a Arte&Diseño una empresa con mas de 20 años de experiencia y manejando producto de
+                        publicidad ubicados es Suba gaintana</p>
+                </div>
+            </div>
+            <div class="box__footer">
+                <h2>Compañia</h2>
+                <a th:href="@{/conocenos}">Quienes somos</a>
+                <a href="">Contactanos</a>
+                <a href=""></a>
+            </div>
+            <div class="box__footer">
+                <h2>Contratación</h2>
+                <a th:href="@{/TrabajaConNosotros}">Trabaja con nosotros</a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+            <div class="box__footer">
+                <h2>Redes sociales</h2>
+                <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href=""><i class="fa-brands fa-twitter"></i> Twtter</a>
+                <a href=""><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+                <a href=""><i class="fa-brands fa-instagram"></i> instagram</a>
+            </div>
+        </div>
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2021</p>
+            <b>Tecno&Art</b>
+        </div>
+        <div class="final"></div>
+    </footer>
+    <!-------FIN PIE DE PAGINA---->
 
         <!-- JavaScript -->
-        
         <!--scrip de iconos------>
         <script src="https://kit.fontawesome.com/f9d0333c9c.js" crossorigin="anonymous"></script>
+        <script src="js/indexAnimation.js"></script>
     </body>
 </html>
