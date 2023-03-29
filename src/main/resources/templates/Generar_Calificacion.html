@@ -119,7 +119,7 @@
                     <label for="opcion" class="formulario__label">Venta que realizo</label>
                     <select th:field="*{Venta}" name="Venta" id="opcion" class="formulario__input select-box formulario__select">
                         <option value="">--Seleccione una opción--</option>
-                        <option value="opcion1" th:each="Venta:${ventas}"
+                        <option value="opcion1" th:each="Venta:${Venta}"
                                 th:value="${Venta.IdVenta}"
                                 th:text="${Venta.IdVenta}"
                         />
