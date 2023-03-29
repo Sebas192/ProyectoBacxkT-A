@@ -1,64 +1,91 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>INICIO</title>
+    <title>Trabaja con nosotros</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/trabaja_con_nosotrosstyle.css">
-    <link rel="icon" href="img/logov_beta_png.png">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/trabaja_con_nosotrosstyle.css">
     <link rel="icon" type="image/png" href="img/logosolo.png">
     <script src="/js/scrollreveal.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/04773321cf.js" crossorigin="anonymous"></script>
 </head>
 <body> 
-
-    <!----------------ENCABEZADO-------------------------->
-    <div class="logocontenido2 tarjeta">
-        <img id="logoini" src="img/logo.png" alt="">
+<!----------------ENCABEZADO-------------------------->
+<header>
+    <nav class="encabezado animation2">
+        <div>
+            <img src="img/logo.png" alt="arte diseño" class="logo8">
+        </div>
+        <input type="checkbox" id="check1">
+        <label for="check1" class="bar-btn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul class="nav-menu">
+            <li><a class="active" th:href="@{/}" style="text-shadow:1px 1px 5px #000000;">Inicio</a></li>
+            <li><a th:href="@{/conocenos}" style="text-shadow:1px 1px 5px #000000;">Conocenos</a></li>
+            <li><a th:href="@{/NuestroTrabajo}" style="text-shadow:1px 1px 5px #000000;">Nuestro trabajo</a></li>
+            <li><a href="https://goo.gl/maps/hMuVX8ayt5VAKLkA8" style="text-shadow:1px 1px 5px #000000;">Ubicación</a></li>
+        </ul>
+    </nav>
+    <div class="banner-text">
+        <h2>TECNO&ART</h2>
+        <h1>Pudes <b>ser </b>parte <b>de </b>nuestra <span>empresa </span></h1>
+        <div>
+            <a th:href="@{/login}" class="button1">Iniciar</a>
+            <a th:href="@{/Usuario/Registrarse}" class="button2">Registrar</a>
+        </div>
     </div>
-    <div class="container-fluid encabezado">
-        <nav class="row flex-direction">
-            <div class="col-2 laterales"></div>
-            <div class="col-8 nav">
-                <a th:href="@{/}" class="col-2 menu-home">INICIO</a>
-                <a th:href="@{/conocenos}" class="col-2">ACERCA DE NOSOTROS</a>
-                <a th:href="@{/TrabajaConNosotros}" class="col-2">TRABAJA CON NOSOTROS</a>
-                <a th:href="@{/NuestroTrabajo}" class="col-2">NUESTROS TRABAJOS</a>
-                <a th:href="@{/login}" class="col-2">INGRESO</a>
-            </div>
-            <div class="col-2 laterales"></div>
-        </nav>
-    </div>
-    <!----------------FIN ENCABEZADO-------------------------->
+</header>
+<br>
+<br>
+<!----------------FIN ENCABEZADO-------------------------->
 
     <!----------------CONTENIDO-------------------------->
-    <div class="container-fluid contenido">
-        <div class="contenido3 container-fluid row"> 
-            <div id="imagenesini"  class="col-6"><img src="img/equipo.png" alt=""></div>
-            <div id="textoinfo" class="col-6"><h1>Nos mueve un objetivo: Brindar el mejor servicio
-                a nuestros clientes.
-            </h1></div>
-        </div>
-        <div class="contenido3 tarjeta2">
-            <img id="imginicio2" src="img/equipo2.png" alt="">
-            <h1 id="texto">¿Que esperas para ser parte de este gran equipo de trabajo?</h1>
-        </div>
-        <div class="contenido1 container-fluid row"> 
-            <div id="imagenesini1"  class="col-6"><img src="img/equipo3.png" alt=""></div>
-            <div id="imagenesini2" class="col-6">
-                <h1 id="texto1">Aplica a nuestras ofertas en el boton de abajo</h1>
-                <img src="img/flecha.png" alt="">
+    <section class="hero cambiosPA" id="hero">
+
+    </section>
+
+    <section class="dis-sto cambiosPA animation2">
+        <div class="container" id="descubre">
+            <div class="res-info">
+                <div>
+                    <img class="container" src="/img/trabajandoNosotros.jpg" alt="">
+                </div>
+
+                <div class="res-des pad-rig">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">N</span>uestro
+                        </h2>
+                        <h1 class="head hea-dark">Equipo de trabajo</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Siempre trabajamos para brindar el mejor servicio posible a nuestros
+                        clientes, a continuacion te mostramos algunos de nuestros trabajos y algunos de
+                        nuestros clientes satisfechos
+                    </p>
+                </div>
+
             </div>
         </div>
-        <div class="contenido1 tarjeta container-fluid"> 
-            <a href="iniciar_sesion.html"><img id="imginicio3" src="img/botonaplicar.png" alt=""></a>
+    </section>
+
+    <section class="pb bt cambiosPA" id="manual">
+        <div class="container">
+            <div class="global">
+                <h2 class="h2-sub">
+                    <span class="fil">T</span>u 
+                </h2>
+                <h1 class="head">Gran oportunidad</h1>
+                <a th:href="@{/login}" class="btn cta-btn">Trabaja con nosotros</a>
+            </div>
         </div>
-    </div>
-<!----------------FIN CONTENIDO-------------------------->
+    </section>
+    <!----------------FIN CONTENIDO-------------------------->
 
 <!-------PIE DE PAGINA---->
 <footer class="piepagina">

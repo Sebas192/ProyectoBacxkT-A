@@ -10,11 +10,12 @@
     <link rel="icon" type="image/png" href="img/logosolo.png">
     <script src="/src/main/resources/static/js/scrollreveal.js"> </script>
     <script src="https://kit.fontawesome.com/04773321cf.js" crossorigin="anonymous"></script>
+    <script src="/js/scrollreveal.js"></script>
 </head>
 <body> 
     <!----------------ENCABEZADO-------------------------->
-    <header >
-        <nav class="encabezado" id="iraencabezado">
+    <header>
+        <nav class="encabezado animation2" id="iraencabezado">
             <div>
                 <img  src="img/logo.png" alt="arte diseño" class="logo8">
             </div>
@@ -46,11 +47,11 @@
 
     </section>
 
-    <section class="dis-sto cambiosPA">
+    <section class="dis-sto cambiosPA animation">
         <div class="container" id="descubre">
             <div class="res-info">
                 <div>
-                    <img class="container animation" src="/img/TabajoConferece.jpg" alt="">
+                    <img class="container" src="/img/TabajoConferece.jpg" alt="">
                 </div>
 
                 <div class="res-des pad-rig">
@@ -88,7 +89,7 @@
     </section>
 
 
-    <section  id="pasar4" class="disco cambiosPA">
+    <section  id="pasar4" class="disco cambiosPA animation3">
         <div class="container">
             <div class="res-info">
                 <div class="res-des">
@@ -127,11 +128,11 @@
         </div>
     </section>
 
-    <section id="pasar3">
-        <div class="container cambiosPA" id="Misionyvision">
+    <section id="pasar3 ">
+        <div class="container cambiosPA animation" id="Misionyvision">
             <div class="res-info">
                     <div>
-                        <img class="container animation" src="/img/MisionL.png" alt="">
+                        <img class="container" src="/img/MisionL.png" alt="">
                     </div>
                 
                 <div class="res-des pad-rig">
@@ -155,7 +156,7 @@
         </div>
     </section>
 
-    <section  id="pasar4" class="disco cambiosPA">
+    <section  id="pasar4" class="disco cambiosPA animation3">
         <div class="container">
             <div class="res-info">
                 <div class="res-des">
@@ -175,7 +176,7 @@
                     <a  href="#iraencabezado" class="btn cta-btn">Inicio pagina</a>
                 </div>
                 <div>
-                    <img class="container animation" src="/img/ojoVision.png" alt="">
+                    <img class="container" src="/img/ojoVision.png" alt="">
                 </div>
 
             </div>
@@ -194,10 +195,10 @@
     </section>
 
     <section>
-        <div class="container cambiosPA" id="Valores">
+        <div class="container cambiosPA animation" id="Valores">
             <div class="res-info">
                 <div>
-                    <img class="container animation" src="/img/Valoresimg.png" alt="">
+                    <img class="container " src="/img/Valoresimg.png" alt="">
                 </div>
                 <div class="res-des pad-rig">
                     <div class="global">
@@ -272,20 +273,10 @@
         <b>Tecno&Art</b>
     </div>
 </footer>
+
+</body>
 <!-------FIN PIE DE PAGINA---->
 
 <script src="/js/index.js"></script>
-
-<script>
-   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-</script>
-</body>
+<script src="js/indexAnimation.js"></script>
 </html>

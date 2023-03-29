@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/indexstyle.css">
     <link rel="icon" type="image/png" href="img/logosolo.png">
-    <script src="/src/main/resources/static/js/scrollreveal.js"> </script>
     <script src="https://kit.fontawesome.com/04773321cf.js" crossorigin="anonymous"></script>
+    <script src="/js/scrollreveal.js"></script>
 </head>
 <body>
 
     <!----------------ENCABEZADO-------------------------->
     <header>
-        <nav class="encabezado">
+        <nav class="encabezado animation2">
             <div>
-                <img  src="img/logo.png" alt="arte diseño" class="logo8">
+                <img src="img/logo.png" alt="arte diseño" class="logo8">
             </div>
             <input type="checkbox" id="check1">
             <label for="check1" class="bar-btn">
@@ -107,10 +107,10 @@
                     <a  th:href="@{/NuestroTrabajo}" class="btn cta-btn">Nuestro trabajo</a>
                 </div>
                 <div class="image-group pad-rig">
-                    <img src="/img/sellos-oficina.png" alt="">
-                    <img src="/img/Sticker-adhesivo.png" alt="">
-                    <img src="/img/stiker.png" alt="">
-                    <img src="/img/impresiones.png" alt="">
+                    <img class="animation" src="/img/sellos-oficina.png" alt="">
+                    <img class="animation2" src="/img/Sticker-adhesivo.png" alt="">
+                    <img class="animation" src="/img/stiker.png" alt="">
+                    <img class="animation3" src="/img/impresiones.png" alt="">
                 </div>
 
             </div>
@@ -133,8 +133,8 @@
             <div class="res-info">
 
                 <div class="image-group">
-                    <img src="/img/videojuegos.png" alt="">
-                    <img src="/img/pngegg.png" alt="">
+                    <img class="animation" src="/img/videojuegos.png" alt="">
+                    <img class="animation3" src="/img/pngegg.png" alt="">
                 </div>
                 <div class="res-des pad-rig">
                     <div class="global">
@@ -202,6 +202,6 @@
 <!-------FIN PIE DE PAGINA---->
 
 <script src="js/index.js"></script>
-<script src="/js/indexAnimation.js"></script>
+<script src="js/indexAnimation.js"></script>
 </body>
 </html>
