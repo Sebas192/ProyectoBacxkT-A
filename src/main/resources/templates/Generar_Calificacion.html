@@ -101,7 +101,7 @@
         <div class="container1">
 
             <header>Generar calificación</header>
-            <form th:action="@{/Calificacion/Guardar}" th:object=${Calificacion} class="form formulario" id="formulario">
+            <form th:action="@{/Calificacion/Guardar}" th:object=${Calificacion} method="post" class="form formulario" id="formulario">
 
                 <!-- Grupo: Estrellas -->
                 <div class="input-box formulario__grupo" id="grupo__Estrellas">

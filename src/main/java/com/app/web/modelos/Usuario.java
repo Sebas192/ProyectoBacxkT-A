@@ -169,7 +169,6 @@ public class Usuario {
                 ", email='" + email + '\'' +
                 ", Recidencia='" + Recidencia + '\'' +
                 ", password='" + password + '\'' +
-                ", Cotizacion=" + Cotizacion +
                 ", rol=" + rol +
                 ", hojaDeVida=" + hojaDeVida +
                 ", contrato=" + contrato +

@@ -108,7 +108,6 @@ public class Cotizacion {
                 ", Respuesta='" + Respuesta + '\'' +
                 ", FechaRespuesta=" + FechaRespuesta +
                 ", Usuario=" + Usuario +
-                ", venta=" + venta +
                 '}';
     }
 }

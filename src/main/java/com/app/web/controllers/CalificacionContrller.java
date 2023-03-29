@@ -46,7 +46,7 @@ public class CalificacionContrller {
 		Calificacion calificacion = new Calificacion();
 		List<Venta> listaVenta = ServicioVenta.listarVentas();
 		modelo.addAttribute("Calificacion",  calificacion);
-		modelo.addAttribute("ventas", listaVenta);
+		modelo.addAttribute("Venta", listaVenta);
 		return "/Generar_Calificacion";
 	}
 
@@ -57,9 +57,11 @@ public class CalificacionContrller {
 
 	}
 
-	@GetMapping("/Calificacion/editar/{idaspirante}")
+	@GetMapping("/Calificacion/editar/{IdCalificacion}")
 	public String EditarCalificacionFomulario(@PathVariable long IdCalificacion, Model modelo) {
+		List<Venta> listaVenta = ServicioVenta.listarVentas();
 		modelo.addAttribute("Calificacion", servicio.obtenerCalificacionPorId(IdCalificacion));
+		modelo.addAttribute("ventas", listaVenta);
 		return "/Editar_Calificacion";
 	}
 

@@ -56,7 +56,6 @@ public class Rol {
 		return "Rol{" +
 				"IdRol=" + IdRol +
 				", NombreRol='" + NombreRol + '\'' +
-				", listaUsuarios=" + listaUsuarios +
 				'}';
 	}
 }

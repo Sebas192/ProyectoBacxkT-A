@@ -58,10 +58,10 @@
             <div class="formulario__grupo input-box" id="grupo-select2">
                 <label for="opcion" class="formulario__label">Estado</label>
                 <select th:field="*{Estado}" name="opcion2" id="opcion2" class="formulario__input select-box formulario__select">
-                    <option value="">--Seleccione una opción--</option>
-                    <option value="opcion1" th:each="Estado:${Estados}"
-                            th:value="${Estado.IdEstado}"
-                            th:text="${Estado.nombre}"
+                
+                    <option value="opcion1" th:each="Estado:${Estado}"
+                            th:value= 2
+                            th:text="Respondida"
                     />
                 </select>
                 <p class="formulario__input-error"> Seleccione una opción válida.</p>
