@@ -30,12 +30,12 @@ const expresiones = {
 	asegura que la cadena contiene al menos una letra.
 	asegura que la cadena tiene una longitud mínima de 8 caracteres.
 	*/ 
-	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 }
 
 const campos = {
 	password: false,
-	correo: false
+	email: false
 }
 
 const validarFormulario = (e) => {
@@ -43,8 +43,8 @@ const validarFormulario = (e) => {
 		case "password":
 			validarCampo(expresiones.password, e.target, 'password');
 		break;
-		case "correo":
-			validarCampo(expresiones.correo, e.target, 'correo');
+		case "email":
+			validarCampo(expresiones.email, e.target, 'email');
 		break;
 	}
 }
@@ -77,7 +77,7 @@ formulario.addEventListener('submit', (e) => {
 
 
 	
-	if(campos.correo && campos.password){
+	if(campos.email && campos.password){
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {

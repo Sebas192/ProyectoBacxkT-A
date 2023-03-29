@@ -1,149 +1,301 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <title>INICIO</title>
+    <title>Nuestro trabajo</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/nuestros_trabajos.css">
-    <link rel="icon" href="img/logov_beta_png.png">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/nuestros_trabajos.css">
     <link rel="icon" type="image/png" href="img/logosolo.png">
-    <script src="/js/scrollreveal.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/04773321cf.js" crossorigin="anonymous"></script>
+    <script src="/js/scrollreveal.js"> </script>
 </head>
-<body>
 
+<body>
     <!----------------ENCABEZADO-------------------------->
-    <div class="tarjeta logocontenido2">
-        <img id="logoini" src="img/logo.png" alt="">
-    </div>
-    <div class="container-fluid encabezado">
-        <nav class="row flex-direction">
-            <div class="col-2 laterales"></div>
-            <div class="col-8 nav">
-                <a th:href="@{/}" class="col-2 menu-home">INICIO</a>
-                <a th:href="@{/conocenos}" class="col-2">ACERCA DE NOSOTROS</a>
-                <a th:href="@{/TrabajaConNosotros}" class="col-2">TRABAJA CON NOSOTROS</a>
-                <a th:href="@{/NuestroTrabajo}" class="col-2">NUESTROS TRABAJOS</a>
-                <a th:href="@{/login}" class="col-2">INGRESO</a>
+    <header id="iraencabezado">
+        <nav class="encabezado animation2">
+            <div>
+                <img src="img/logo.png" alt="arte diseño" class="logo8">
             </div>
-            <div class="col-2 laterales"></div>
+            <input type="checkbox" id="check1">
+            <label for="check1" class="bar-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a class="active" th:href="@{/}" style="text-shadow:1px 1px 5px #000000;">Inicio</a></li>
+                <li><a href="#descubre" style="text-shadow:1px 1px 5px #000000;">Lo que hacemos</a></li>
+                <li><a href="#pasar3" style="text-shadow:1px 1px 5px #000000;">Algunos trabajos</a></li>
+                <li><a href="https://goo.gl/maps/hMuVX8ayt5VAKLkA8"
+                        style="text-shadow:1px 1px 5px #000000;">Ubicación</a></li>
+            </ul>
         </nav>
-    </div>
+        <div class="banner-text">
+            <h2>TECNO&ART</h2>
+            <h1>El <b>trabajo </b>que <b>realizamos </b>de <span>publicidad</span></h1>
+            <div>
+                <a th:href="@{/login}" class="button1">Iniciar</a>
+                <a th:href="@{/Usuario/Registrarse}" class="button2">Registrar</a>
+            </div>
+        </div>
+    </header>
+    <br>
+    <br>
     <!----------------FIN ENCABEZADO-------------------------->
 
     <!----------------CONTENIDO-------------------------->
-    <div class="container-fluid contenido">
-    </div>
-    <div class="container-fluid contenido">
-        <div class="contenido3">
-            <h1 id="texto">Siempre trabajamos para brindar el mejor servicio posible a nuestros
-                clientes, a continuacion te mostramos algunos de nuestros trabajos y algunos de 
-                nuestros clientes satisfechos</h1>
-        </div>
-    </div>
+    <section class="hero cambiosPA" id="hero">
 
-    <div id="demo" class="carousel slide tarjeta1 contenido3" data-bs-ride="carousel">
-        <!-- Indicators/dots -->
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="col-6 container-fluid">
-                <div class=" carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button class="" type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+    </section>
+
+    <section class="dis-sto cambiosPA animation2">
+        <div class="container" id="descubre">
+            <div class="res-info">
+                <div>
+                    <img class="container" src="/img/personalizado.png" alt="">
                 </div>
 
-                <!-- The slideshow/carousel -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img id="carrusel" src="img/litografia.png" alt="#">
-                        <h1 id="texto1">Litografia</h1>
+                <div class="res-des pad-rig">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">D</span>escubre
+                        </h2>
+                        <h1 class="head hea-dark">Algunos trabajos</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img id="carrusel" src="img/sellos-oficina.png" alt="#" >
-                        <h1 id="texto1">Sellos</h1>
-                    </div>
-                    <div class="carousel-item">
-                        <img id="carrusel" src="img/corte-laser.png" alt="#" >
-                        <h1 id="texto1">Corte Laser</h1>
-                    </div>
-                    <div class="carousel-item">
-                        <img id="carrusel" src="img/impresiones.png" alt="#" >
-                        <h1 id="texto1">Impresion Laser</h1>
-                    </div>
-                    <div class="carousel-item">
-                        <img id="carrusel" src="img/Sticker-adhesivo.png" alt="#" >
-                        <h1 id="texto1">Adhesivos</h1>
-                    </div>
-                    <div class="carousel-item">
-                        <img id="carrusel" src="img/banner.png" alt="#" >
-                        <h1 id="texto1">Banner</h1>
-                    </div>
+                    <p>
+                        Siempre trabajamos para brindar el mejor servicio posible a nuestros
+                        clientes, a continuacion te mostramos algunos de nuestros trabajos y algunos de
+                        nuestros clientes satisfechos
+                    </p>
                 </div>
 
-                <!-- Left and right controls/icons -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
-            <div class="col-3"></div>
-        </div>
-    </div>
-    <div class="relleno contenido1"></div> 
-<!----------------FIN CONTENIDO-------------------------->
-
-<!-------PIE DE PAGINA---->
-<footer class="piepagina">
-    <div class="container__footer">
-        <div class="box__footer">
-            <div class="logo">
-                <iframe  class="w3-round-large" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.154079670225!2d-74.11302318523752!3d4.743269996555049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8488b8c01c3f%3A0xfb245984007b5257!2sArte%20%26%20Dise%C3%B1o%20Publicidad!5e0!3m2!1ses!2sco!4v1649227214068!5m2!1ses!2sco" width="300" height="300" style="border:0; margin-left: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            </div>
-            <div class="terms text-center">
-                <p>Bienvenidos a Arte&Diseño una empresa con mas de 20 años de experiencia y manejando producto de publicidad ubicados es Suba gaintana</p>
             </div>
         </div>
-        <div class="box__footer">
-            <h2>Compañia</h2>
-            <a href="conoce mas.html">Quienes somos</a>
-            <a href="https://goo.gl/maps/BpLzbr5ME97XEUrLA">Como llegar</a>
-            <a href="">Contactanos</a>
-            <a href=""></a>
-        </div>
-        <div class="box__footer">
-            <h2>Contratación</h2>
-            <a href="registro_HDV.html">Trabaja con nosotros</a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-        </div>
-        <div class="box__footer">
-            <h2>Redes sociales</h2>
-            <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
-            <a href=""><i class="fa-brands fa-twitter"></i> Twtter</a>
-            <a href=""><i class="fa-brands fa-linkedin"></i> Linkedin</a>
-            <a href=""><i class="fa-brands fa-instagram"></i> instagram</a>
-        </div>
-    </div>
-    <div class="box__copyright">
-        <hr>
-        <p>Todos los derechos reservados © 2021</p>
-        <b>Tecno&Art</b>
-    </div>
-    <div class="final"></div> 
-</footer>
-<!-------FIN PIE DE PAGINA---->
+    </section>
 
-<script src="js/index.js"></script>
+
+    <section class="taste bt cambiosPA">
+        <div class="container">
+            <div class="global">
+                <h2 class="h2-sub">
+                    <span class="fil">A</span>lgunos
+                </h2>
+                <h1 class="head">Trabajos</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="pasar3">
+        <div class="container cambiosPA animation" id="Misionyvision">
+            <div class="res-info">
+                <div>
+                    <img class="container" src="/img/litografia.png" alt="">
+                </div>
+
+                <div class="res-des pad-rig">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">S</span>obre
+                        </h2>
+                        <h1 class="head hea-dark">Litografia</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        La litografía es una técnica de impresión de alta calidad y detalle que ha sido ampliamente utilizada en la publicidad desde el siglo XIX. Se utiliza una plancha tratada químicamente para crear la imagen o texto deseado, que luego se transfiere a papel u otro material. Aunque ha sido complementada por tecnologías digitales, la litografía sigue siendo valiosa en la producción de materiales publicitarios de alta calidad.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="" class="disco cambiosPA animation3">
+        <div class="container">
+            <div class="res-info">
+                <div class="res-des">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">S</span>obre
+                        </h2>
+                        <h1 class="head hea-dark">Sellos</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Los sellos son una técnica de impresión versátil y económica utilizada en la publicidad para imprimir diseños, textos y logotipos en materiales como papel y cartón. Pueden ser utilizados para crear materiales de marketing personalizados o en la producción en masa de materiales promocionales, como folletos y catálogos.
+                    </p>
+                </div>
+                <div>
+                    <img class="container" src="/img/sellospa.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="">
+        <div class="container cambiosPA animation" id="Misionyvision">
+            <div class="res-info">
+                <div>
+                    <img class="container" src="/img/Cortelazer.png" alt="">
+                </div>
+
+                <div class="res-des pad-rig">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">S</span>obre
+                        </h2>
+                        <h1 class="head hea-dark">Corte Laser</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        El corte láser es una técnica de corte de alta precisión utilizada en la publicidad para crear elementos personalizados y detallados en una variedad de materiales, así como para la producción eficiente en masa de piezas idénticas.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="" class="disco cambiosPA animation3">
+        <div class="container">
+            <div class="res-info">
+                <div class="res-des">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">S</span>obre
+                        </h2>
+                        <h1 class="head hea-dark">Impresion Laser</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        La impresión láser es una técnica de impresión de alta calidad y velocidad utilizada en la publicidad para imprimir diseños, logotipos y texto en una variedad de materiales, incluyendo papel, cartón y plásticos. Es una opción popular debido a su capacidad para imprimir detalles finos y colores precisos, lo que permite la producción de materiales publicitarios de alta calidad y profesionalismo.
+                    </p>
+                </div>
+                <div>
+                    <img class="container" src="/img/impreLazer.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="">
+        <div class="container cambiosPA animation" id="Misionyvision">
+            <div class="res-info">
+                <div>
+                    <img class="container" src="/img/adesivo.png" alt="">
+                </div>
+
+                <div class="res-des pad-rig">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">S</span>obre
+                        </h2>
+                        <h1 class="head hea-dark">Adhesivos</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Los adhesivos son una herramienta clave en la publicidad para fijar materiales como carteles y diseños a una variedad de superficies. Los adhesivos de alta calidad pueden proporcionar una fuerte sujeción para garantizar que los materiales se mantengan en su lugar durante largos períodos de tiempo, lo que los convierte en una opción popular para campañas publicitarias a largo plazo.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="" class="disco cambiosPA animation3">
+        <div class="container">
+            <div class="res-info">
+                <div class="res-des">
+                    <div class="global">
+                        <h2 class="h2-sub">
+                            <span class="fil">S</span>obre
+                        </h2>
+                        <h1 class="head hea-dark">Banner</h1>
+                        <div class="circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Los banners son una forma popular de publicidad en línea que utiliza imágenes y texto para promocionar un producto o servicio. Los banners pueden aparecer en sitios web, redes sociales y en dispositivos móviles, y pueden ser diseñados para llamar la atención de los espectadores y dirigirlos a un sitio web o página de destino específica. Los banners son una forma efectiva de promocionar productos o servicios en línea y pueden ser adaptados para llegar a audiencias específicas en función de la demografía y los intereses.
+                    </p>
+                    <a href="#iraencabezado" class="btn cta-btn">Volver al inicio</a>
+                </div>
+                <div>
+                    <img class="container" src="/img/Banneres1.png" alt="">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+
+    <!----------------FIN CONTENIDO-------------------------->
+
+    <!-------PIE DE PAGINA---->
+    <footer class="piepagina">
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <iframe class="w3-round-large"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.154079670225!2d-74.11302318523752!3d4.743269996555049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8488b8c01c3f%3A0xfb245984007b5257!2sArte%20%26%20Dise%C3%B1o%20Publicidad!5e0!3m2!1ses!2sco!4v1649227214068!5m2!1ses!2sco"
+                        width="300" height="300" style="border:0; margin-left: 20px;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+                <div class="terms text-center">
+                    <p>Bienvenidos a Arte&Diseño una empresa con mas de 20 años de experiencia y manejando producto de
+                        publicidad ubicados es Suba gaintana</p>
+                </div>
+            </div>
+            <div class="box__footer">
+                <h2>Compañia</h2>
+                <a href="conoce mas.html">Quienes somos</a>
+                <a href="https://goo.gl/maps/BpLzbr5ME97XEUrLA">Como llegar</a>
+                <a href="">Contactanos</a>
+                <a href=""></a>
+            </div>
+            <div class="box__footer">
+                <h2>Contratación</h2>
+                <a href="registro_HDV.html">Trabaja con nosotros</a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+            <div class="box__footer">
+                <h2>Redes sociales</h2>
+                <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href=""><i class="fa-brands fa-twitter"></i> Twtter</a>
+                <a href=""><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+                <a href=""><i class="fa-brands fa-instagram"></i> instagram</a>
+            </div>
+        </div>
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2021</p>
+            <b>Tecno&Art</b>
+        </div>
+        <div class="final"></div>
+    </footer>
+    <!-------FIN PIE DE PAGINA---->
+
+    
 </body>
+<script src="js/index.js"></script>
+<script src="js/indexAnimation.js"></script>
+
 </html>
