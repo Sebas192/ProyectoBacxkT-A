@@ -14,7 +14,14 @@
 <body>
     <section class="container">
         <header>Editar PQRS</header>
-        <form th:action="@{/Pqrs/editar/{IdPqrs}(IdPqrs=${Pqrs.IdPqrs})}" th:object="${Pqrs}" method="post" class="form formulario" id="formulario">
+        <form th:action="@{/Pqrs/{IdPqrs}(IdPqrs=${Pqrs.IdPqrs})}"  th:object="${Pqrs}" method="post" class="form formulario" id="formulario">
+
+            <div class="column">
+                <label for="respuesta">Respuesta PQRS:</label>
+                <input type="text" th:field="*{RespuestaPqrs}" id="respuesta" name="respuestaPqrs" required />
+                <br />
+                <button type="submit">Enviar respuesta</button>
+             </div>
 
             <div class="column">
 
@@ -92,7 +99,7 @@
             <div class="input-box formulario__grupo" id="grupo__RespuestaPqrs">
                 <label for="RespuestaPqrs" class="formulario__label">Descripción</label>
                 <div class="formulario__grupo-input">
-                    <textarea th:field="*{RespuestaPqrs}" class="formulario__input" name="RespuestaPqrs" id="RespuestaPqrs" rows="4"></textarea>
+                    <textarea th:field="*{Descripcion}" class="formulario__input" name="RespuestaPqrs" id="RespuestaPqrs" rows="4"></textarea>
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
                 <p class="formulario__input-error">Ingresa una descripcion Valida.</p>
@@ -114,7 +121,7 @@
 
     </section>
     <!--scrip de registrate------>
-    <script src="/js/PQRS.js"></script>
+
     <!--scrip de iconos------>
     <script src="https://kit.fontawesome.com/f9d0333c9c.js" crossorigin="anonymous"></script>
 

@@ -134,9 +134,7 @@ public class Venta {
 				", Monto=" + Monto +
 				", Estado='" + Estado + '\'' +
 				", Observacion='" + Observacion + '\'' +
-				", pqrs=" + pqrs +
 				", calificacion=" + calificacion +
-				", Cotizacion=" + Cotizacion +
 				'}';
 	}
 }

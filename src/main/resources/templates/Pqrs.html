@@ -117,22 +117,22 @@
     <i class='bx bx-menu' ></i>
   </div>
   <div class="col-lg-3" id="botonAgregar">
-    <a th:href="@{/Pqrs/Registrar}" class="btn btn-info" style="margin-left: 100px;"> Agregar</a>
+
     <br>
   </div>
   <div class="container" id="containerTabla" >
-    <table class="table table-hover" id="example"style="background-color: white;">
+    <table class="table table-hover" id="example"style="background-color: white; margin-left: -100px;">
       <thead>
       <tr>
         
         <th>IdPqrs</th>
         <th>Descripcion</th>
         <th>Fecha</th>
-        <th>Respuesta</th>
          <th>Estado</th>
         <th>Tipo</th>
         <th>Prioridad</th>
         <th>Venta</th>
+        <th>Respuesta</th>
         <th>Acciones</th>
       </tr>
       </thead>
@@ -141,11 +141,11 @@
        <td th:text="${Pqrs.IdPqrs}">Nombres</td>
         <td th:text="${Pqrs.Descripcion}">Nombres</td>
          <td th:text="${Pqrs.Fecha}">Nombres</td>
-       <td th:text="${Pqrs.RespuestaPqrs}">Nombres</td>
        <td th:text="${Pqrs.Estado.nombre}">Nombres</td>
         <td th:text="${Pqrs.Tipo.NombreTipo}">Nombres</td>
         <td th:text="${Pqrs.Prioridad.NombrePrioridad}">Nombres</td>
          <td th:text="${Pqrs.Venta.IdVenta}">Nombres</td>
+        <td th:text="${Pqrs.RespuestaPqrs}">Nombres</td>
        
         <td>
 

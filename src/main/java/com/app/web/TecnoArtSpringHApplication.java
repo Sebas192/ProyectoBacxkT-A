@@ -16,7 +16,7 @@ public class TecnoArtSpringHApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TecnoArtSpringHApplication.class, args);
-		String password = "1234";
+		String password = "@Joan2378";
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String hashedPassword = passwordEncoder.encode(password);
 		System.out.println(hashedPassword);

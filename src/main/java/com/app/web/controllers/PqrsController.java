@@ -68,8 +68,16 @@ public class PqrsController {
 	}
 
 	@GetMapping("/Pqrs/editar/{IdPqrs}")
-	public String mostrarFormularioDeEitar(@PathVariable long IdPqrs, Model modelo) {
-		modelo.addAttribute("pqrs", servicio.obtenerPqrsPorId(IdPqrs));
+	public String EditarPqrsFomulario(@PathVariable long IdPqrs, Model modelo) {
+		List<Tipo> ListaTipo = tipoServicio.listarTipo();
+		List<Prioridad> ListaPrio = prioridadServicio.listarPrioridad();
+		List<Estado> ListaEstado = estadoServicio.listarEstado();
+		List<Venta> listaVenta = ServicioVenta.listarVentas();
+		modelo.addAttribute("Pqrs", servicio.obtenerPqrsPorId(IdPqrs));
+		modelo.addAttribute("Tipos", ListaTipo);
+		modelo.addAttribute("Prioridades", ListaPrio);
+		modelo.addAttribute("Estado", ListaEstado);
+		modelo.addAttribute("ventas", listaVenta);
 		return "/Editar_PQRS";
 	}
 

@@ -16,15 +16,15 @@ public class Pqrs {
 	private String Fecha;
 
 	@ManyToOne
-	@JoinColumn(name = "tipo_id", nullable = false)
+	@JoinColumn(name = "tipo_id", nullable = true)
 	private Tipo tipo;
 
 
 	@ManyToOne
-	@JoinColumn(name = "prioridad_id", nullable = false)
+	@JoinColumn(name = "prioridad_id", nullable = true)
 	private Prioridad prioridad;
 	@ManyToOne
-	@JoinColumn(name = "estado_id", nullable = false)
+	@JoinColumn(name = "estado_id", nullable = true)
 	private Estado estado;
 
 

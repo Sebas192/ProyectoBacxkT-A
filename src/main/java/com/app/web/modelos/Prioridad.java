@@ -21,7 +21,7 @@ public class Prioridad {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long IdPrioridad;
 
-	@Column(name = "NombrePrioridad", nullable = true)
+	@Column(name = "NombrePrioridad")
 	private String NombrePrioridad;
 
 	@OneToMany(mappedBy = "prioridad", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -66,7 +66,6 @@ public class Prioridad {
 		return "Prioridad{" +
 				"IdPrioridad=" + IdPrioridad +
 				", NombrePrioridad='" + NombrePrioridad + '\'' +
-				", pqrs=" + pqrs +
 				'}';
 	}
 }

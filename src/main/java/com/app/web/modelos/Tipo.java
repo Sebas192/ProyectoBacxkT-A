@@ -58,7 +58,6 @@ public class Tipo {
 		return "Tipo{" +
 				"IdTipo=" + IdTipo +
 				", NombreTipo='" + NombreTipo + '\'' +
-				", pqrs=" + pqrs +
 				'}';
 	}
 }
