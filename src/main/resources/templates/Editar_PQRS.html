@@ -20,13 +20,13 @@
                 <label for="respuesta">Respuesta PQRS:</label>
                 <input type="text" th:field="*{RespuestaPqrs}" id="respuesta" name="respuestaPqrs" required />
                 <br />
-                <button type="submit">Enviar respuesta</button>
+               
              </div>
 
             <div class="column">
 
                 <!-- Grupo: Tipo -->
-                <div class="formulario__grupo input-box" id="grupo-select">
+                <div class="formulario__grupo input-box" id="grupo-select" hidden>
                     <label for="opcion" class="formulario__label">Tipo</label>
                     <select th:field="*{Tipo}" name="opcion" id="opcion" class="formulario__input select-box formulario__select">
                         <option value="">--Seleccione una opción--</option>
@@ -40,7 +40,7 @@
                 </div>
 
                 <!----Grupo: prioridad ------>
-                <div class="formulario__grupo input-box" id="grupo-select1">
+                <div class="formulario__grupo input-box" id="grupo-select1" hidden>
                     <label for="opcion" class="formulario__label">prioridad</label>
                     <select th:field="*{Prioridad}" name="opcion1" id="opcion1" class="formulario__input select-box formulario__select">
                         <option value="">--Seleccione una opción--</option>
@@ -69,10 +69,10 @@
 
             <div class="column">
                 <!-- Grupo: fecha -->
-                <div class="input-box formulario__grupo" id="grupo__Fecha">
+                <div class="input-box formulario__grupo" id="grupo__Fecha" hidden>
                     <label for="Fecha" class="formulario__label">Fecha</label>
                     <div class="formulario__grupo-input">
-                        <input type="date" th:field="*{Fecha}" name="Fecha" id="Fecha" class="formulario__input"  required>
+                        <input  th:field="*{Fecha}" name="Fecha" id="Fecha" class="formulario__input"  required>
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
                     <span class="formulario__input-error">Fecha no válida. Por favor, ingrese una fecha en
@@ -80,9 +80,9 @@
                                 YYYY/MM/DD.</span>
                 </div>
                 <!----Grupo: Venta------>
-                <div class="formulario__grupo input-box" id="grupo-select3">
+                <div  class="formulario__grupo input-box" id="grupo-select3" hidden>
                     <label for="opcion" class="formulario__label">Venta</label>
-                    <select th:field="*{Venta}" name="opcion3" id="opcion3" class="formulario__input select-box formulario__select">
+                    <select  th:field="*{Venta}"  name="opcion3" id="opcion3" class="formulario__input select-box formulario__select">
                         <option value="">--Seleccione una opción--</option>
                         <option value="opcion1" th:each="Venta:${ventas}"
                                 th:value="${Venta.IdVenta}"
@@ -96,8 +96,8 @@
             </div>
 
             <!-- Grupo: Descripcion -->
-            <div class="input-box formulario__grupo" id="grupo__RespuestaPqrs">
-                <label for="RespuestaPqrs" class="formulario__label">Descripción</label>
+            <div class="input-box formulario__grupo" id="grupo__RespuestaPqrs" hidden>
+                <label  for="RespuestaPqrs" class="formulario__label">Descripción</label>
                 <div class="formulario__grupo-input">
                     <textarea th:field="*{Descripcion}" class="formulario__input" name="RespuestaPqrs" id="RespuestaPqrs" rows="4"></textarea>
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
