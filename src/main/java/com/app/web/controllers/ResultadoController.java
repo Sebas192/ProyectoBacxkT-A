@@ -60,6 +60,8 @@ public class ResultadoController {
 
 	@GetMapping("/Resultado/editar/{IdResultado}")
 	public String EditarResultadoFomulario(@PathVariable long IdResultado, Model modelo) {
+		List<Cita> ListaCitas = citaServicio.listarTodasLasCitas();
+		modelo.addAttribute("Citas",ListaCitas);
 		modelo.addAttribute("Resultado", servicio.obtenerResultadoPorId(IdResultado));
 		return "/Editar_Resultado";
 	}

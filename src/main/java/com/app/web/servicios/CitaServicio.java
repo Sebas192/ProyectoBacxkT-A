@@ -9,12 +9,12 @@ public interface CitaServicio {
 
 	public List<Cita> listarTodasLasCitas();
 
-	public Cita guardarCita(Cita entrevista);
+	public Cita guardarCita(Cita cita);
 
 	public Cita obtenerCitaPorId(Long IdCita);
 
-	public Cita actualizarCita(Cita Cita);
+	public Cita actualizarCita(Cita cita);
 
-	public void eliminarCita(Long idCita);
+	public void eliminarCita(Long IdCita);
 
 }

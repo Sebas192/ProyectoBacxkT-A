@@ -1,8 +1,6 @@
 package com.app.web.modelos;
 
 import java.sql.Time;
-import java.util.ArrayList;
-import java.util.List;
 
 
 import javax.persistence.*;
@@ -56,6 +54,7 @@ public class Vacante {
 	}
 
 	public Vacante() {
+		super();
 	}
 
 	public Long getIdVacante() {

@@ -1,18 +1,13 @@
 package com.app.web.modelos;
-
-import java.util.Date;
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import java.sql.Date;
 
 @Entity
 @Table(name = "Contrato")
@@ -21,14 +16,14 @@ public class Contrato {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long IdContrato;
 
-	@Column(name = "NombreContrato", nullable = false, length = 20)
+	@Column(name = "NombreContrato", nullable = false)
 	private String NombreContrato;
 
 
-	@Column(name = "Fecha_inicio", nullable = false)
+	@Column(name = "Fecha_inicio")
 	private Date Fecha_inicio;
 
-	@Column(name = "Fecha_final", nullable = false)
+	@Column(name = "Fecha_final")
  	private Date Fecha_final;
 
 	@OneToOne
@@ -36,6 +31,7 @@ public class Contrato {
 	private Usuario usuario;
 
 	public Contrato() {
+		super();
 	}
 
 	public Contrato(Long idContrato, String nombreContrato, Date fecha_inicio, Date fecha_final, Usuario usuario) {
@@ -44,8 +40,6 @@ public class Contrato {
 		Fecha_inicio = fecha_inicio;
 		Fecha_final = fecha_final;
 		this.usuario = usuario;
-
-
 	}
 
 	public Long getIdContrato() {

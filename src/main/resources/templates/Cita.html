@@ -126,26 +126,30 @@
         <thead>
         <tr>
             <th>Direccion</th>
-            <th>Fecha</th>
+            <th>Correo</th>
+            <th>Documento</th>
+            <th>Nombre</th>
+            <th>Fecha YYYY/MM/DD</th>
             <th>Hora</th>
-            <th>Postulacion</th>
             <th>Acciones</th>
         </tr>
     </thead>
-    <tbody>
-        <tr th:each="Cita : ${Cita}">
-            <td th:text="${Cita.Direccion}">Nombres</td>
-            <td th:text="${Cita.Fecha}">Nombres</td>
-            <td th:text="${Cita.Hora}">Nombres</td>
-            <td th:text="${Cita.Postulacion.IdPostulacion}">Nombres</td>
-            <td>
+      <tbody>
+      <tr th:each="Cita : ${Cita}">
+        <td th:text="${Cita.direccion}"></td>
+        <td th:text="${Cita.correo}"></td>
+        <td th:text="${Cita.Documento}"></td>
+        <td th:text="${Cita.nombre}"></td>
+        <td th:text="${Cita.fecha}"></td>
+        <td th:text="${Cita.hora}"></td>
+        <td>
 
-                <a th:href="@{/Cita/editar/{IdCita}(IdCita=${Cita.IdCita})}" class="btn btn-info"><i class="fa-solid fa-pencil"></i></a>
-                <a
-                        th:href="@{/Cita/eliminar/{IdCita}(IdCita=${Cita.IdCita})}"
-                        class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a></td>
-        </tr>
-    </tbody>
+          <a th:href="@{/Cita/editar/{IdCita}(IdCita=${Cita.IdCita})}" class="btn btn-info"><i class="fa-solid fa-pencil"></i></a>
+          <a
+                  th:href="@{/Cita/eliminar/{IdCita}(IdCita=${Cita.IdCita})}"
+                  class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a></td>
+      </tr>
+      </tbody>
     </table>
 </div>
 </section>>

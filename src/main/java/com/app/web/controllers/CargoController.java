@@ -52,16 +52,11 @@ public class CargoController {
 	}
 
 	@PostMapping("/Cargo/{IdCargo}")
-	public String EditarCargo(@PathVariable long IdCargo, @ModelAttribute("Cargo") Cargo cargo,
-							  Model modelo) {
-
+	public String EditarCargo(@PathVariable long IdCargo, @ModelAttribute("Cargo") Cargo cargo,Model modelo) {
 		Cargo CargoExistente = servicio.obtenerCargoPorId(IdCargo);
 		CargoExistente.setIdCargo(IdCargo);
 		CargoExistente.setNombeCargo(cargo.getNombeCargo());
-
-
-
 		servicio.actualizarCargo(CargoExistente);
-		return "redirect:/Aspirante";
+		return "redirect:/Cargo";
 	}
 }

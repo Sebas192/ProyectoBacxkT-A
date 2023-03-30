@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 import lombok.Data;
 
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
 @Table(name = "HojaDeVida")
@@ -50,6 +50,7 @@ public class HojaDeVida {
 	private Usuario usuario;
 
 	public HojaDeVida() {
+		super();
 	}
 
 	public HojaDeVida(Long idHojaDeVida, String institucion, String titulo, Date fecha_grado, String empresa, String puesto, Date fecha_inicio, Date fecha_fin, String descripcionT, String habilidades, String referencias, Usuario usuario) {

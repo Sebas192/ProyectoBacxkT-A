@@ -25,8 +25,8 @@ public class CitaServicioImp implements CitaServicio {
     }
     
     @Override
-    public Cita obtenerCitaPorId(Long idCita) {
-        return repositorio.findById(idCita).get();
+    public Cita obtenerCitaPorId(Long IdCita) {
+        return repositorio.findById(IdCita).get();
     }
     
     @Override
@@ -35,8 +35,8 @@ public class CitaServicioImp implements CitaServicio {
     }
     
     @Override
-    public void eliminarCita(Long idCita) {
-        repositorio.deleteById(idCita);    
+    public void eliminarCita(Long IdCita) {
+        repositorio.deleteById(IdCita);
     }   
 }
 

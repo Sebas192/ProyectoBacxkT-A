@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <link rel="icon" type="image/png" href="/img/logosolo.png">
@@ -104,11 +104,11 @@
     <div class="container-div">
         <div class="container1">
 
-            <header>Realizar Hoja de vida</header>
+            <header>Realizar Contrato</header>
             <form th:action="@{/Contrato/Guardar}" th:object="${Contrato}" method="post" class="form formulario"
                   id="formulario">
 
-                <h2>Educación</h2>
+
                 <!-- Grupo: NombreContrato -->
                 <div class="input-box formulario__grupo" id="grupo__NombreContrato">
                     <label for="NombreContrato" class="formulario__label">Nombre del contrato:</label>
@@ -127,7 +127,7 @@
                     <div class="input-box formulario__grupo" id="grupo__Fecha_inicio">
                         <label for="Fecha_inicio" class="formulario__label">Fecha inicio del contrato:</label>
                         <div class="formulario__grupo-input">
-                            <input type="date" th:field="*{Fecha_inicio}" class="formulario__input" id="Fecha_inicio"
+                            <input type="Date" th:fiel="Fecha_inicio" class="formulario__input" id="Fecha_inicio"
                                    name="Fecha_inicio" >
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
@@ -139,7 +139,7 @@
                     <div class="input-box formulario__grupo" id="grupo__Fecha_final">
                         <label for="Fecha_final" class="formulario__label">Fecha final del contrato:</label>
                         <div class="formulario__grupo-input">
-                            <input type="date" th:field="*{Fecha_final}" class="formulario__input" id="Fecha_final"
+                            <input type="Date" th:fiel="Fecha_final" class="formulario__input" id="Fecha_final"
                                    name="Fecha_final" >
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>

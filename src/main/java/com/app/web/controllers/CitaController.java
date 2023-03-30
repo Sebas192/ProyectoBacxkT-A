@@ -27,7 +27,7 @@ public class CitaController {
 		servicio.eliminarCita(IdCita);
 		return "redirect:/Cita";
 	}
-		//experimentos//
+	//experimentos//
 		
 	@GetMapping("/Cita/Registrar")
 	public String CitaFormulario(Model modelo) {
@@ -44,15 +44,13 @@ public class CitaController {
 	}
 
 	@GetMapping("/Cita/editar/{IdCita}")
-	public String EditarCitaFomulario(@PathVariable long IdCita, Model modelo) {
+	public String EditarCitaFomulario(@PathVariable long IdCita,Model modelo) {
 		modelo.addAttribute("Cita", servicio.obtenerCitaPorId(IdCita));
 		return "/Editar_Cita";
 	}
 
 	@PostMapping("/Cita/{IdCita}")
-	public String EditarCita(@PathVariable long IdCita, @ModelAttribute("Cita") Cita cita,
-			Model modelo) {
-
+	public String EditarCita(@PathVariable long IdCita, @ModelAttribute("Cita") Cita cita,Model modelo) {
 		Cita CitaExistente = servicio.obtenerCitaPorId(IdCita);
 		CitaExistente.setIdCita(IdCita);
 		CitaExistente.setDireccion(cita.getDireccion());
@@ -63,7 +61,6 @@ public class CitaController {
 		CitaExistente.setCorreo(cita.getCorreo());
 		CitaExistente.setDocumento(cita.getDocumento());
 		CitaExistente.setNombre(cita.getNombre());
-
 		servicio.actualizarCita(CitaExistente);
 		return "redirect:/Cita";
 	}
