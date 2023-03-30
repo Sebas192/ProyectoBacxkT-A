@@ -17,7 +17,7 @@ public class ClienteController {
 	@GetMapping("/cliente/Calificacion")
 	public String ClienteCalificacion (Model modelo) {
 
-		return "/Cliente_Cotizacion";
+		return "/Cliente_Calificacion";
 	}
 
 	@GetMapping("/cliente/Cotizacion")

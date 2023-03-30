@@ -43,7 +43,7 @@ public class AdminController {
 
     @GetMapping("/admin/PQRS")
     public String ConsultarPQRS(Model model){
-        return "/pqrs";
+        return "/Pqrs";
     }
 
     @GetMapping("/admin/Venta")

@@ -25,7 +25,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -35,25 +34,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/login", "/index",
-                        "/js/**","/css/**","/img/**","/bootstrap/**"
-                ).permitAll()
-                .antMatchers("/admin/**").hasAuthority("Administrador")
-                .antMatchers("/empleado/**").hasAuthority("empleado")
-                .antMatchers("/cliente/**").hasAuthority("cliente")
+                .antMatchers("/login", "/index", "/js/**","/css/**","/img/**","/bootstrap/**").permitAll()
+                .antMatchers("/admin/**", "/Usuario","/Cargo","/Cita","/Contrato","/Resultado",
+                        "/Vacante","/CosulHojaVida","/Pqrs","/Venta"
+                ).hasRole("ADMIN")
+                .antMatchers("/empleado/**").hasRole("EMPLEADO")
+                .antMatchers("/cliente/**","/cliente/Bienvenida","/cliente/Calificacion","/cliente/Cotizacion","/cliente/HojaDeVida",
+                        "/cliente/Pqrs","/cliente/Venta","/cliente/GenerarCalificacion","/cliente/GenerarCotizacion","/cliente/GenerarHojaDeVida","/cliente/GenerarPQRS"
+
+                ).hasRole("CLIENTE")
                 .and()
                 .formLogin()
                 .loginPage("/login")
                 .successHandler((req, resp, auth) -> {
                     System.out.println("User roles: " + auth.getAuthorities());
                     switch (auth.getAuthorities().iterator().next().getAuthority()) {
-                        case "Administrador":
+                        case "ROLE_ADMIN":
                             resp.sendRedirect("/Usuario");
                             break;
-                        case "empleado":
-                            resp.sendRedirect("/Calificacion");
+                        case "ROLE_EMPLEADO":
+                            resp.sendRedirect("/empleado/index");
                             break;
-                        case "cliente":
+                        case "ROLE_CLIENTE":
                             resp.sendRedirect("/cliente/Bienvenida");
                             break;
                         default:
@@ -62,11 +64,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                             break;
                     }
                 })
-
                 .permitAll()
                 .and()
                 .logout()
                 .permitAll();
     }
-
 }
+
