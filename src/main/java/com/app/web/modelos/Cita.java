@@ -12,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name = "Cita")
 public class Cita {
@@ -37,7 +38,7 @@ public class Cita {
 	private Date fecha;
 
 	@Column(name = "hora")
-	private Time hora;
+	private String hora;
 
 	@OneToOne
 	@JoinColumn(name = "IdPostulacion")
@@ -50,7 +51,7 @@ public class Cita {
 		super();
 	}
 
-	public Cita(Long idCita, String direccion, String correo, Long documento, String nombre, Date fecha, Time hora, Postulacion postulacion, Resultado resultado) {
+	public Cita(Long idCita, String direccion, String correo, Long documento, String nombre, Date fecha, String hora, Postulacion postulacion, Resultado resultado) {
 		IdCita = idCita;
 		this.direccion = direccion;
 		this.correo = correo;
@@ -110,11 +111,11 @@ public class Cita {
 		this.fecha = fecha;
 	}
 
-	public Time getHora() {
+	public String getHora() {
 		return hora;
 	}
 
-	public void setHora(Time hora) {
+	public void setHora(String hora) {
 		this.hora = hora;
 	}
 
@@ -143,7 +144,7 @@ public class Cita {
 				", Documento=" + Documento +
 				", nombre='" + nombre + '\'' +
 				", fecha=" + fecha +
-				", hora=" + hora +
+				", hora='" + hora + '\'' +
 				", postulacion=" + postulacion +
 				", resultado=" + resultado +
 				'}';

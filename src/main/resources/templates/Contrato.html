@@ -118,7 +118,7 @@
     <i class='bx bx-menu' ></i>
   </div>
   <div class="col-lg-3" id="botonAgregar">
-    <a th:href="@{/Cargo/Registrar}" class="btn btn-info" style="margin-left: 100px;"> Agregar</a>
+    <a th:href="@{/Contrato/Registrar}" class="btn btn-info" style="margin-left: 100px;"> Agregar</a>
   <br>  
   </div>
   <div class="container" id="containerTabla">
@@ -126,19 +126,20 @@
         <thead>
             <tr>
                 <th>Nombre Contrato</th>
-                <th>Periodo</th>
-                <th>Usuario</th>
-                <th>Nombre Usuario</th>
+                <th>Fecha inicio</th>
+                <th>Fecha final</th>
+                <th>ID Usuario</th>
+                <th>Nombre Aspirante</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="Contrato : ${Contrato}">
-                <td th:text="${Contrato.NombreContrato}">Nombres</td>
-                <td th:text="${Contrato.Fecha_inicio}">Nombres</td>
-              <td th:text="${Contrato.Fecha_final}">Nombres</td>
-                <td th:text="${Contrato.Usuario.IdUsuario}">Nombres</td>
-                <td th:text="${Contrato.Usuario.NombreCompleto}">Nombres</td>
+                <td th:text="${Contrato.NombreContrato}"></td>
+                <td th:text="${Contrato.Fecha_inicio}"></td>
+                <td th:text="${Contrato.Fecha_final}"></td>
+                <td th:text="${Contrato.Usuario.IdUsuario}"></td>
+                <td th:text="${Contrato.Usuario.NombreCompleto}"></td>
                 <td>
 
                     <a th:href="@{/Contrato/editar/{IdContrato}(IdContrato=${Contrato.IdContrato})}" class="btn btn-info"><i class="fa-solid fa-pencil"></i></a>
